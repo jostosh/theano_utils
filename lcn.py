@@ -77,7 +77,6 @@ class LecunLCN(object):
 
 
     def gaussian_filter(self, kernel_shape):
-        print kernel_shape
         x = numpy.zeros(kernel_shape, dtype=theano.config.floatX)
 
         def gauss(x, y, sigma=2.0):
