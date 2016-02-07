@@ -43,7 +43,7 @@ class LecunLCN(object):
         # Subtractive step
         mid = int(numpy.floor(filter_shape[2] / 2.))
 
-        #print convout.broadcastable
+        # Make filter dimension broadcastable and subtract
         centered_X = X - T.addbroadcast(convout[:, :, mid:-mid, mid:-mid], 1)
 
         # Boolean marks whether or not to perform divisive step
